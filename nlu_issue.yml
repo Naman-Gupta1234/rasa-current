@@ -1,0 +1,48 @@
+version: "2.0"
+nlu:
+
+- intent: issue_start
+  examples: |
+    - hi
+    - hello
+    - start
+    
+- intent: issue_number
+  examples: |
+    - form
+
+- intent: issue_response
+  examples: |
+    - ok
+    - okay
+    - all right
+    - fine
+
+- intent: issue_any
+  examples: |
+    - no
+    - nope
+    - none
+    - no other issue
+    - no, no other issue
+
+- intent: issue_damage
+  examples: |
+    - form
+
+- intent: issue_replace
+  examples: |
+    - yes
+    - yes i would
+    - yes replace it
+    - yes i would like to
+    - yes please
+
+- intent: issue_email
+  examples: |
+    - form
+
+- intent: issue_delv_desc
+  examples: |
+    - form
+    

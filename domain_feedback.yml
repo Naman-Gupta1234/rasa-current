@@ -1,0 +1,34 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+
+responses:
+  utter_feedback_find:
+  -text: Were you able to find your desired product on the site?
+  utter_feedback_price:
+  -text: Were the prices reasonable?
+  utter_feedback_impfeature:
+  -text: Which feature of the app are most/least important to you?
+  utter_feedback_addfeature:
+  -text: Which features would you like to  add to improve Flipkart's user-experience?
+  utter_feedback_experience:
+  -text: How would you rate your experience with us?
+  utter_feedback_recommend:
+  -text: How likely are you to recommend Flipkart to a friend?
+  utter_feedback_comeback:
+  -text: How likely are you to come back on this website?
+  utter_feedback_rate:
+  -text: If you like flipkart, we would greatly appreciate it if you could rate the app on the App/Play Store. 
+
+actions:
+- utter_feedback_find
+- utter_feedback_price
+- utter_feedback_impfeature
+- utter_feedback_addfeature
+- utter_feedback_experience
+- utter_feedback_recommend
+- utter_feedback_comeback
+- utter_feedback_rate

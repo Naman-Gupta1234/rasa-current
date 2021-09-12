@@ -1,0 +1,13 @@
+The voice bot conversing with a customer to sell a credit card
+
+Bot- I am FlipBot from FlipBank. Are you a FlipBank credit cardholder?
+User - Yes, no
+Bot- Have you ever used a FlipBank lifestyle credit card?
+User - Yes, no
+Bot- Are you a priority customer of our bank?
+User - No
+Bot (no)- If you’re looking for a credit card that provides whole lot of benefits covering major areas of your life, then you should ideally go for a lifestyle credit card. The joining fee is just Rs 200 and interest rate is 2.5% per month. 
+
+Bot (yes)- If you’re looking for a credit card that provides whole lot of benefits covering major areas of your life, then you should ideally go for a lifestyle credit card. There is no joining fee for you and interest rate is just 2.2% per month.
+
+
