@@ -1,0 +1,76 @@
+version: "2.0"
+nlu:
+
+- intent: credit_start_yes
+  examples: |
+    - Yes
+    - Yes I am
+
+- intent: credit_start_no
+  examples: |
+    - No
+    - No I am not
+
+- intent: credit_try_yes
+  examples: |
+    - Yes
+    - Yes I would love to
+
+- intent: credit_try_no
+  examples: |
+    - No
+    - No I do not want to
+
+- intent: credit_use_yes
+  examples: |
+    - Yes
+    - Yes I have
+
+- intent: credit_use_no
+  examples: |
+
+    - No I have not 
+
+- intent: credit_prioritycustomer_answer_yes
+  examples: |
+    - Yes
+    - Yes I am 
+    
+- intent: credit_prioritycustomer_answer_no
+  examples: |
+    - No
+    - No I am not
+    
+- intent: credit_expenditure
+  examples: |
+    - I spend around 5000 rupees per month.  
+
+- intent: credit_fuelsurcharge_yes
+  examples: |
+   - Yes i want to know more
+
+- intent: credit_fuelsurcharge_no
+  examples: |
+   - no i dont want to know more
+
+- intent: credit_house
+  examples: |
+  - 10 am day after tomorrow
+    
+- intent: credit_med
+  examples: |
+   -  
+   
+- intent: credit_apply_yes
+  examples: |
+   - Yes
+
+- intent: credit_apply_no
+  examples: |
+   - No
+   - I am not interested right now
+   
+- intent: credit_document
+  examples: |
+   - form
+    

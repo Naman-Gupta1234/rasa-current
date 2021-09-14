@@ -1,0 +1,103 @@
+version: "2.0"
+
+stories:
+
+- story: holder lscc 
+  steps:
+  - action: utter_credit_intro
+  - intent: credit_start_yes
+  - action: utter_credit_used
+  - intent: credit_use_yes
+  - action: utter_credit_end
+    
+- story: holder pc cardyes
+  steps:
+  - action: utter_credit_intro
+  - intent: credit_start_yes
+  - action: utter_credit_used
+  - intent: credit_use_no
+  - action: 
+  - intent: 
+  - action: utter_credit_priority
+  - intent: credit_prioritycustomer_answer_yes
+  - action: utter_credit_priority_yes
+  - action: utter_credit_expend
+  - intent: credit_expenditure
+  - action: utter_credit_know_more
+  - intent: credit_fuelsurcharge_yes
+  - action: utter_credit_surcharge
+  - action: utter_credit_medical
+  - action: utter_credit_want
+  - intent: credit_apply_yes
+  - action: utter_credit_docu
+  - action: utter_credit_home
+  - intent: credit_house
+  - action: utter_credit_hope
+
+- story: holder pc cardno
+  steps:
+  - action: utter_credit_intro
+  - intent: credit_start_yes
+  - action: utter_credit_used
+  - intent: credit_use_no
+  - action: utter_credit_priority
+  - intent: credit_prioritycustomer_answer_yes
+  - action: utter_credit_priority_yes
+  - action: utter_credit_expend
+  - intent: credit_expenditure
+  - action: utter_credit_know_more
+  - intent: credit_fuelsurcharge_yes
+  - action: utter_credit_surcharge
+  - action: utter_credit_medical
+  - action: utter_credit_want
+  - intent: credit_apply_no
+  - action: utter_credit_thankyou
+
+
+- story: holder cardyes
+  steps:
+  - action: utter_credit_intro
+  - intent: credit_start_yes
+  - action: utter_credit_used
+  - intent: credit_use_no
+  - action: utter_credit_priority
+  - intent: credit_prioritycustomer_answer_no
+  - action: utter_credit_priority_no
+  - action: utter_credit_expend
+  - intent: credit_expenditure
+  - action: utter_credit_know_more
+  - intent: credit_fuelsurcharge_yes
+  - action: utter_credit_surcharge
+  - action: utter_credit_medical
+  - action: utter_credit_want
+  - intent: credit_apply_yes
+  - action: utter_credit_docu
+  - action: utter_credit_home
+  - intent: credit_house
+  - action: utter_credit_hope
+
+- story: holder cardno
+  steps:
+  - action: utter_credit_intro
+  - intent: credit_start_yes
+  - action: utter_credit_used
+  - intent: credit_use_no
+  - action: utter_credit_priority
+  - intent: credit_prioritycustomer_answer_no
+  - action: utter_credit_priority_no
+  - action: utter_credit_expend
+  - intent: credit_expenditure
+  - action: utter_credit_know_more
+  - intent: credit_fuelsurcharge_yes
+  - action: utter_credit_surcharge
+  - action: utter_credit_medical
+  - action: utter_credit_want
+  - intent: credit_apply_no
+  - action: utter_credit_thankyou
+
+- story: nothing cardyes
+  steps:
+  - action: utter_credit_intro
+  - intent: credit_start_no
+
+- story: nothing cardno
