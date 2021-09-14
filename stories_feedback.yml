@@ -1,0 +1,45 @@
+version: "2.0"
+
+stories:
+
+- story: found it
+  steps:
+  - action: utter_feedback_find
+  - intent: feedback_findprod_yes
+  - action: utter_feedback_price
+  - intent: feedback_pri
+  - action: utter_feedback_impfeature
+  - intent: feedback_impfeat
+  - action: utter_feedback_addfeature
+  - intent: feedback_addfeat
+  - action: utter_feedback_experience
+  - intent: feedback_exp
+  - action: utter_feedback_recommend
+  - intent: feedback_recommendation
+  - action: utter_feedback_comeback
+  - intent: feedback_back
+  - action: utter_feedback_rate
+  - intent: feedback_rating
+  
+
+- story: did not find it
+  steps:
+  - action: utter_feedback_find
+  - intent: feedback_findprod_no
+  - action: utter_feedback_whichproduct
+  - intent: feedback_whichprod
+  - action: utter_feedback_price
+  - intent: feedback_pri
+  - action: utter_feedback_impfeature
+  - intent: feedback_impfeat
+  - action: utter_feedback_addfeature
+  - intent: feedback_addfeat
+  - action: utter_feedback_experience
+  - intent: feedback_exp
+  - action: utter_feedback_recommend
+  - intent: feedback_recommendation
+  - action: utter_feedback_comeback
+  - intent: feedback_back
+  - action: utter_feedback_rate
+  - intent: feedback_rating
+  

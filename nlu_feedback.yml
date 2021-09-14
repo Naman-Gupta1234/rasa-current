@@ -1,0 +1,60 @@
+version: "2.0"
+nlu:
+
+- intent: feedback_findprod_yes
+  examples: |
+    - Yes i found it
+    - Yes 
+    - I found it 
+
+- intent: feedback_findprod_no
+  examples: |
+    - No
+    - I did not find it
+    - No i did not 
+
+- intent: feedback_whichprod
+  examples: |
+    - form
+    
+- intent: feedback_pri
+  examples: |
+    - yes
+    - yes they were
+    - they were
+    - no
+    - no they were not
+    - they were not
+
+- intent: feedback_impfeat
+  examples: |
+    - form
+      
+- intent: feedback_addfeat
+  examples: |
+    - form
+      
+- intent: feedback_exp
+  examples: |
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+      
+- intent: feedback_recommendation
+  examples: |
+    - most likely
+    - likely
+    - not likely
+      
+- intent: feedback_back
+  examples: |
+    - For sure
+    - Maybe
+    - It was a mistake
+      
+- intent: feedback_rating
+  examples: |
+    - Ya sure
+    - No I do not want to 

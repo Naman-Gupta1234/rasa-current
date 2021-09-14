@@ -7,7 +7,27 @@ nlu:
     - hello
     - start
     
-- intent: issue_number
+- intent: issue_delay_number
+  examples: |
+    - form
+
+- intent: issue_package_number
+  examples: |
+    - form
+
+- intent: issue_email_number
+  examples: |
+    - form
+
+- intent: issue_money_number
+  examples: |
+    - form
+
+- intent: issue_item_number
+  examples: |
+    - form
+
+- intent: issue_invoice_number
   examples: |
     - form
 
@@ -18,10 +38,15 @@ nlu:
     - all right
     - fine
 
-- intent: issue_any
+- intent: issue_any_yes
+  examples: |
+    - yes
+    - yes there are
+    - yes there is
+
+- intent: issue_any_no
   examples: |
     - no
-    - nope
     - none
     - no other issue
     - no, no other issue

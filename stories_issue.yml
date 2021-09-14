@@ -1,0 +1,30 @@
+version: "2.0"
+
+stories:
+
+- story: only delay in delivery
+  steps:
+  - intent: issue_start
+  - action: utter_choose
+  - intent: issue_delay_number
+  - action: utter_issue_res
+  - intent: issue_response
+  - action: utter_issue_ask
+  - intent: issue_any_no
+  - action: utter_issue_end
+
+- story: delay and money
+  steps:
+  - intent: issue_start
+  - action: utter_choose
+  - intent: issue_delay_number
+  - action: utter_issue_res
+  - intent: issue_response
+  - action: utter_issue_ask
+  - intent: issue_any_yes
+  - action: 
+  - intent:
+  - action:
+  - intent:
+  - action:
+  

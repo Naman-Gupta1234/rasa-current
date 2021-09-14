@@ -1,0 +1,65 @@
+version: "2.0"
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+- credit_start
+- credit_try
+- credit_thanks
+- credit_use
+- credit_prioritycustomer
+- credit_prioritycustomeryes
+- credit_prioritycustomerno
+- credit_expenditure
+- credit_fuelsurcharge
+- credit_med
+- credit_apply
+- credit_document
+
+responses:
+  utter_credit_intro:
+    - text: I am FlipBot from FlipBank. Are you a FlipBank credit cardholder?
+  utter_credit_tryout:
+    - text: Would you like to try out our newly launched lifestyle credit card?
+  utter_credit_thankyou:
+    - text: No issues. Thank you for your time
+  utter_credit_used:
+    - text: Have you ever used a FlipBank lifestyle credit card?
+  utter_credit_priority:
+    - text: Are you a priority customer of our bank?
+  utter_credit_priorityyes:
+    - text: If you’re looking for a credit card that provides whole lot of benefits covering major areas of your life, then you should ideally go for a lifestyle credit card. There is no joining fee for you and with interest rate of just 2.2% per month.
+  utter_credit_priorityno:
+    - text: If you’re looking for a credit card that provides whole lot of benefits covering major areas of your life, then you should ideally go for a lifestyle credit card. The joining fee is just Rs 200 and with low interest rate of 2.5% per month.
+  utter_credit_expend:
+    - text: What is your monthly expenditure on fuel/travel/dining ?
+  utter_credit_surcharge:
+    - text: By using Lifestyle cards you can save on surcharges on fuel.
+  utter_credit_medical:
+    - text: Our lifestyle credit cards also provides medical benefits by partnering with healthcare and wellness     professionals. The card also provides discounts on movie tickets.
+  utter_credit_want:
+    - text: Are you interested in applying?
+  utter_credit_docu:
+    - text: The following documents will be required to authorize your card
+        Copy of identity proof tr
+        Copy of address proof
+        PAN card copy
+        Two months salary slips or IT Returns
+        Duly signed in application
+        1 passport size photograph
+        An employee from our bank will be coming for collecting the documents. When is the best time to come to your house?
+
+actions : 
+- utter_credit_intro
+- utter_credit_tryout
+- utter_credit_thankyou
+- utter_credit_used
+- utter_credit_priority
+- utter_credit_priorityyes
+- utter_credit_priorityno
+- utter_credit_expend
+- utter_credit_surcharge
+- utter_credit_medical
+- utter_credit_want
+- utter_credit_docu

@@ -2,12 +2,33 @@ The voice bot conversing with a customer to sell a credit card
 
 Bot- I am FlipBot from FlipBank. Are you a FlipBank credit cardholder?
 User - Yes, no
-Bot- Have you ever used a FlipBank lifestyle credit card?
+Bot (no) - Would you like to try out our newly launched lifestyle credit card?
+User (no) - No
+Bot - No issues. Thank you for your time 
+User (yes) - Yes
+Bot (yes)- Have you ever used a FlipBank lifestyle credit card?
 User - Yes, no
 Bot- Are you a priority customer of our bank?
 User - No
-Bot (no)- If you’re looking for a credit card that provides whole lot of benefits covering major areas of your life, then you should ideally go for a lifestyle credit card. The joining fee is just Rs 200 and interest rate is 2.5% per month. 
+Bot (no)- If you’re looking for a credit card that provides whole lot of benefits covering major areas of your life, then you should ideally go for a lifestyle credit card. The joining fee is just Rs 200 and with low interest rate of 2.5% per month. 
 
-Bot (yes)- If you’re looking for a credit card that provides whole lot of benefits covering major areas of your life, then you should ideally go for a lifestyle credit card. There is no joining fee for you and interest rate is just 2.2% per month.
-
+Bot (yes)- If you’re looking for a credit card that provides whole lot of benefits covering major areas of your life, then you should ideally go for a lifestyle credit card. There is no joining fee for you and with interest rate of just 2.2% per month.
+User- Okay
+Bot  - What is your monthly expenditure on fuel/travel/dining ?
+User  - I spend around 5000 rupees per month.
+Bot -  By using Lifestyle cards you can save on surcharges on fuel.
+User -  Tell me more about this card.   
+Bot - Our lifestyle credit cards also provides medical benefits by partnering with healthcare and wellness professionals. The card also provides discounts on movie tickets.
+Bot - Are you interested in applying?
+Button- Yes/No
+Bot (yes)- The following documents will be required to authorize your card:
+Copy of identity proof tr
+Copy of address proof 
+PAN card copy
+Two months salary slips or IT Returns
+Duly signed in application
+1 passport size photograph
+An employee from our bank will be coming for collecting the documents. When is the best time to come to your house?
+User - form
+User - I am not interested right now. (Buttons)
 

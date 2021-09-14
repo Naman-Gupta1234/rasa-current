@@ -1,13 +1,18 @@
-version: '2.0'
+
+issue_item_numberversion: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 
 intents: 
-- issue_number
+- issue_start
+- issue_delay_number
+- issue_package_number
+- issue_money_number
+- issue_item_number
 - issue_response
-- issue_any
-- isse_desc
+- issue_any_no
+- issue_any_yes
 - issue_damage
 - issue_replace
 - issue_email
@@ -19,26 +24,26 @@ responses:
   - text: Please select the option relevant to your issue
     buttons:
       - title: Delay in delivery
-        payload: "/utter_issue_num"
+        payload: "/issue_delay_number"
       - title: Improper packaging
-        payload: "/utter_issue_num"
-      - title: Inaccuracy in tracking details
-        payload: "/utter_issue_num"
-      - title: No email updates
-        payload: "/utter_issue_num"
+        payload: "/issue_package_number"
       - title: Money no refunded
-        payload: "/utter_issue_num"
+        payload: "/issue_money_number"
       - title: Issue with item delivered
-        payload: "/utter_issue_num"
-      - title: Bill/ Invoice
-        payload: "/utter_issue_num"
-
+        payload: "/issue_item_number"
   utter_issue_num:
   - text: Please enter your order number
   utter_issue_res:
   - text: Your order will be delivered within 3 business days
   utter_issue_ask:
   - text: Is there any other issue?
+    buttons: 
+    - text: "No"
+      payload: "/issue_any_no"
+    - text: "Yes"
+      payload: "/issue_any_yes"
+  utter_issue_other:
+  - text: Please describe your issue?
   utter_issue_end:
   - text: Okay. Have a good day
   utter_issue_pack_desc:
@@ -49,19 +54,14 @@ responses:
   - text: Would you like to go for a repacement? The same product will be delivered to you and the damaged product will be collected back
   utter_issue_days:
   - text: Okay. Your order will be delivered within 5 business days
-  utter_issue_email:
-  - text: Please enter your email id
-  utter_issue_it:
-  - text: Your issue will be passed onto the IT team and immediately looked into
   utter_issue_finance:
   - text: Your issue will be passed onto the finance team and immediately looked into
   utter_issue_delv_desc:
   - text: Please describe the issue with your delivered order
-  utter_invoice:
-  - text: Your invoice will be sent to you on your registered email id shortly
 
 
 actions:
+- utter_choose
 - utter_issue_num
 - utter_issue_res
 - utter_issue_ask
@@ -70,8 +70,5 @@ actions:
 - utter_issue_damage
 - utter_issue_replace
 - utter_issue_days
-- utter_issue_email
-- utter_issue_it
 - utter_issue_finance
 - utter_issue_delv_desc
-- utter_invoice
