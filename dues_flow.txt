@@ -1,0 +1,26 @@
+The voice bot conversing with a customer to check why the customer has not paid his credit card dues, and suggest suitable follow-up options
+
+
+User- Start
+Bot - It has come to our notice that you havent paid your credit card dues yet
+User- yes I am well aware about it
+
+Bot - How many days has it been since the due date?
+User - buttons(within 3 days, more than 3 days)
+
+Bot - If its within 3 days then no late fees will be charged so i request you to please pay as soon as possible.
+User - Sure I will pay it before 3 days are over, sure I will
+
+Bot - Since its already been over 3 days interest would be charged. To keep your Credit Score high please consider paying dues timely. 
+User - Okay I will pay it
+
+Bot - May I Know the reason for the delay.
+User - I lost my job , my financial condition is not that good , I have some unpaid Emi's , I forgot to pay It just slipped out of my mind , 
+
+(I lost my job , my financial condition is not that good , I have some unpaid Emi's )
+Bot - Make Sure to discuss your concern with your bank to find out an appropriate solution.There are alternative solutions like Personal loan  or other repayment mechanisms where you repay the outstanding amount as monthly EMIs. 
+User - okay , thank you  
+
+(I forgot to pay It just slipped out of my mind)
+Bot- get in touch with your bank to pay off the outstanding bill amount immediately. You can also request the bank representative to reverse the late-fees. Banks try to reverse the late-fee charges for one-time delays. 
+User - okay , thank you

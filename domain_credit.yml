@@ -1,103 +1,121 @@
-version: "2.0"
+version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-
 intents:
-- credit_start_yes
-- credit_start_no
-- credit_try_yes
-- credit_try_no
-- credit_thanks
-- credit_the_end
-- credit_use_yes
-- credit_use_no
-- credit_prioritycustomer_answer_yes
-- credit_prioritycustomer_answer_no
-- credit_prioritycustomeryes
-- credit_prioritycustomerno
-- credit_expenditure
-- credit_fuelsurcharge_yes
-- credit_fuelsurcharge_no
-- credit_med
-- credit_apply_yes
-- credit_apply_no
-- credit_document
-
+- credit_hi:
+    use_entities: true
+- credit_start_yes:
+    use_entities: true
+- credit_start_no:
+    use_entities: true
+- credit_try_yes:
+    use_entities: true
+- credit_try_no:
+    use_entities: true
+- credit_thanks:
+    use_entities: true
+- credit_the_end:
+    use_entities: true
+- credit_use_yes:
+    use_entities: true
+- credit_use_no:
+    use_entities: true
+- credit_prioritycustomer_answer_yes:
+    use_entities: true
+- credit_prioritycustomer_answer_no:
+    use_entities: true
+- credit_prioritycustomeryes:
+    use_entities: true
+- credit_prioritycustomerno:
+    use_entities: true
+- credit_expenditure:
+    use_entities: true
+- credit_apply_yes:
+    use_entities: true
+- credit_apply_no:
+    use_entities: true
+- credit_house:
+    use_entities: true
+- credit_knowmore_yes:
+    use_entities: true
+- credit_knowmore_no:
+    use_entities: true
+entities: []
+slots: {}
 responses:
   utter_credit_intro:
   - buttons:
-      - payload: "/credit_start_yes"
-        text: "Yes"
-      - payload: "/credit_start_no"
-        text: "No"
+    - payload: /credit_start_yes
+      title: Yes
+    - payload: /credit_start_no
+      title: No
     text: I am FlipBot from FlipBank. Are you a FlipBank credit cardholder?
   utter_credit_tryout:
-    - text: Would you like to try out our newly launched lifestyle credit card?
+  - buttons:
+    - payload: /credit_try_yes
+      title: Yes
+    - payload: /credit_try_no
+      title: No
+    text: Would you like to try out our newly launched lifestyle credit card?
   utter_credit_thankyou:
-    - text: No issues. Thank you for your time
+  - text: No issues. Thank you for your time
   utter_credit_end:
-    - text: Okay. Thank you for being a part of FlipBank.
+  - text: Okay. Thank you for being a part of FlipBank.
   utter_credit_used:
   - buttons:
-      - payload: "/credit_use_yes"
-        text: "Yes"
-      - payload: "/credit_use_no"
-        text: "No"
+    - payload: /credit_use_yes
+      title: Yes
+    - payload: /credit_use_no
+      title: No
     text: Have you ever used a FlipBank lifestyle credit card?
   utter_credit_priority:
   - buttons:
-      - payload: "/credit_prioritycustomer_answer_yes"
-        text: "Yes"
-      - payload: "/credit_prioritycustomer_answer_no"
-        text: "No"
+    - payload: /credit_prioritycustomer_answer_yes
+      title: Yes
+    - payload: /credit_prioritycustomer_answer_no
+      title: No
     text: Are you a priority customer of our bank?
   utter_credit_priority_yes:
-    - text: If you’re looking for a credit card that provides whole lot of benefits covering major areas of your life, then you should ideally go for a lifestyle credit card. There is no joining fee for you and with interest rate of just 2.2% per month.
+  - text: If you’re looking for a credit card that provides whole lot of benefits covering major areas of your life, then you should ideally go for a lifestyle credit card. There is no joining fee for you and with interest rate of just 2.2% per month.
   utter_credit_priority_no:
-    - text: If you’re looking for a credit card that provides whole lot of benefits covering major areas of your life, then you should ideally go for a lifestyle credit card. The joining fee is just Rs 200 and with low interest rate of 2.5% per month.
+  - text: If you’re looking for a credit card that provides whole lot of benefits covering major areas of your life, then you should ideally go for a lifestyle credit card. The joining fee is just Rs 200 and with low interest rate of 2.5% per month.
   utter_credit_expend:
   - buttons:
-     - payload: "/credit_expenditure"
-        text: "Rs 1000 - 4000"
-      - payload: "/credit_expenditure"
-        text: "Rs 4000 - 5000"
-      - payload: "/credit_expenditure"
-        text: "Above Rs 5000"
-  text: What is your monthly expenditure on fuel/travel/dining ?
+    - payload: /credit_expenditure
+      title: Rs 1000 - 4000
+    - payload: /credit_expenditure
+      title: Rs 4000 - 5000
+    - payload: /credit_expenditure
+      title: Above Rs 5000
+    text: What is your monthly expenditure on fuel/travel/dining ?
   utter_credit_know_more:
   - buttons:
-    - payload: "/"
-      text: "Yes"
-    - payload: "/"
-      text: "No"
+    - payload: /credit_knowmore_yes
+      title: Yes
+    - payload: /credit_knowmore_no
+      title: No
     text: Do you want to know more about the card?
   utter_credit_surcharge:
-    - text: By using Lifestyle cards you can save on surcharges on fuel.
+  - text: By using Lifestyle cards you can save on surcharges on fuel.
   utter_credit_medical:
-    - text: Our lifestyle credit cards also provides medical benefits by partnering with healthcare and wellness professionals. The card also provides discounts on movie tickets.
+  - text: Our lifestyle credit cards also provides medical benefits by partnering with healthcare and wellness professionals. The card also provides discounts on movie tickets.
   utter_credit_want:
   - buttons:
-      - payload: "/credit_apply_yes"
-        text: "Yes"
-      - payload: "/credit_apply_no"
-        text: "No"
+    - payload: /credit_apply_yes
+      title: Yes
+    - payload: /credit_apply_no
+      title: No
     text: Are you interested in applying?
   utter_credit_docu:
-    - text: The following documents will be required to authorize your card
-        Copy of identity proof tr
-        Copy of address proof
-        PAN card copy
-        Two months salary slips or IT Returns
-        Duly signed in application
-        1 passport size photograph
+  - text: The following documents will be required to authorize your card- Copy of identity proof, Copy of address proof, PAN card copy, Two months salary slips or IT Returns, Duly signed in application, 1 passport size photograph
   utter_credit_home:
   - text: An employee from our bank will be coming for collecting the documents. When is the best time to come to your house?
   utter_credit_hope:
   - text: Thank you. We hope the card is useful
-
-
-actions : 
+actions:
 - utter_credit_intro
 - utter_credit_tryout
 - utter_credit_thankyou
@@ -112,3 +130,7 @@ actions :
 - utter_credit_want
 - utter_credit_docu
 - utter_credit_know_more
+- utter_credit_hope
+- utter_credit_home
+forms: {}
+e2e_actions: []

@@ -1,6 +1,12 @@
 version: "2.0"
 nlu:
 
+- intent: credit_hi
+  examples: |
+    - hi
+    - start
+    - hello
+
 - intent: credit_start_yes
   examples: |
     - Yes
@@ -28,49 +34,42 @@ nlu:
 
 - intent: credit_use_no
   examples: |
-
-    - No I have not 
+    - No I have not
 
 - intent: credit_prioritycustomer_answer_yes
   examples: |
     - Yes
-    - Yes I am 
-    
+    - Yes I am
+
 - intent: credit_prioritycustomer_answer_no
   examples: |
     - No
     - No I am not
-    
+
 - intent: credit_expenditure
   examples: |
-    - I spend around 5000 rupees per month.  
-
-- intent: credit_fuelsurcharge_yes
-  examples: |
-   - Yes i want to know more
-
-- intent: credit_fuelsurcharge_no
-  examples: |
-   - no i dont want to know more
+    - I spend around 5000 rupees per month.
 
 - intent: credit_house
   examples: |
-  - 10 am day after tomorrow
-    
-- intent: credit_med
-  examples: |
-   -  
-   
+    - 10 am day after tomorrow
+
 - intent: credit_apply_yes
   examples: |
-   - Yes
+    - Yes
 
 - intent: credit_apply_no
   examples: |
-   - No
-   - I am not interested right now
-   
-- intent: credit_document
+    - No
+    - I am not interested right now
+
+- intent: credit_knowmore_yes
   examples: |
-   - form
-    
+    - yes
+    - yes i want to
+
+- intent: credit_knowmore_no
+  examples: |
+    - no
+    - i dont want to
+

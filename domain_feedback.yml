@@ -1,70 +1,97 @@
 version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-# user
 intents:
-- feedback_findprod_yes
-- feedback_findprod_no
-- feedback_whichprod
-- feedback_pri
-- feedback_impfeat
-- feedback_addfeat
-- feedback_exp
-- feedback_recommendation
-- feedback_back
-- feedback_rating
-
+- feedback_findprod_yes:
+    use_entities: true
+- feedback_start:
+    use_entities: true
+- choose_issue:
+    use_entities: true
+- choose_feedback:
+    use_entities: true
+- feedback_findprod_no:
+    use_entities: true
+- feedback_whichprod:
+    use_entities: true
+- feedback_pri:
+    use_entities: true
+- feedback_impfeat:
+    use_entities: true
+- feedback_addfeat:
+    use_entities: true
+- feedback_exp:
+    use_entities: true
+- feedback_recommendation:
+    use_entities: true
+- feedback_back:
+    use_entities: true
+- feedback_rating:
+    use_entities: true
+entities: []
+slots: {}
 responses:
+  utter_choose_case:
+  - buttons:
+    - payload: /choose_feedback
+      title: The voice bot conversing with a customer to gather user feedback on a specific topic
+    - payload: /choose_issue
+      title: A voice bot conversing with a customer to address a specific issue related to an ecommerce order
+    text: Please choose a case to start interacting with FlipBot
+  utter_feedback_please:
+  - text: Please answer the following questions to provide your valuable feedback
   utter_feedback_find:
-  - text: Were you able to find your desired product on the site?
-    buttons:
-      - title: "Yes"
-        payload: "/feedback_findprod_yes"
-      - title: "No"
-        payload: "/feedback_findprod_no"
+  - buttons:
+    - payload: /feedback_findprod_yes
+      title: Yes
+    - payload: /feedback_findprod_no
+      title: No
+    text: Were you able to find your desired product on the site?
   utter_feedback_whichproduct:
   - text: What was the product?
   utter_feedback_price:
-  - text: Were the prices reasonable?
-    buttons:
-      - title: "Yes"
-        payload: "/feedback_pri"
-      - title: "No"
-        payload: "/feedback_pri"  
+  - buttons:
+    - payload: /feedback_pri
+      title: Yes
+    - payload: /feedback_pri
+      title: No
+    text: Were the prices reasonable?
   utter_feedback_impfeature:
   - text: Which feature of the app are most/least important to you?
   utter_feedback_addfeature:
-  - : Which features would you like to  add to improve Flipkart's user-experience?
+  - text: Which features would you like to  add to improve Flipkart's user-experience?
   utter_feedback_experience:
   - text: How would you rate your experience with us? (Rate from 1 to 5)
   utter_feedback_recommend:
-  - text: How likely are you to recommend Flipkart to a friend?
-    buttons:
-      - title: "Most likely"
-        payload: "/feedback_recommendation"
-      - title: "Likely"
-        payload: "/feedback_recommendation"
-      - title: "Not likely"
-        payload: "/feedback_recommendation"
+  - buttons:
+    - payload: /feedback_recommendation
+      title: Most likely
+    - payload: /feedback_recommendation
+      title: Likely
+    - payload: /feedback_recommendation
+      title: Not likely
+    text: How likely are you to recommend Flipkart to a friend?
   utter_feedback_comeback:
-  - text: How likely are you to come back on this website?
-    buttons:
-      - title: "For sure"
-        payload: "/feedback_back"
-      - title: "Maybe"
-        payload: "/feedback_back"
-      - title: "It was a mistake"
-        payload: "/feedback_back"  
+  - buttons:
+    - payload: /feedback_back
+      title: For sure
+    - payload: /feedback_back
+      title: Maybe
+    - payload: /feedback_back
+      title: It was a mistake
+    text: How likely are you to come back on this website?
   utter_feedback_rate:
-  - text: If you like flipkart, we would greatly appreciate it if you could rate the app on the App/Play Store. 
-    buttons:
-      - title: "Ya sure"
-        payload: "/feedback_rating"
-      - title: "No I do not want to"
-        payload: "/feedback_rating"
-
-# bot
+  - buttons:
+    - payload: /feedback_rating
+      title: Ya sure
+    - payload: /feedback_rating
+      title: No I do not want to
+    text: If you like flipkart, we would greatly appreciate it if you could rate the app on the App/Play Store.
+  utter_feedback_end:
+  - text: Thank you for your time
 actions:
 - utter_feedback_find
 - utter_feedback_price
@@ -74,3 +101,7 @@ actions:
 - utter_feedback_recommend
 - utter_feedback_comeback
 - utter_feedback_rate
+- utter_feedback_end
+- utter_feedback_please
+forms: {}
+e2e_actions: []

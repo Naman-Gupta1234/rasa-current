@@ -1,22 +1,36 @@
 version: "2.0"
 nlu:
 
+- intent: choose_feedback
+  examples: |
+    - feedback from user
+
+- intent: choose_issue
+  examples: |
+    - issue related to order
+
+- intent: feedback_start
+  examples: |
+    - start
+    - hi
+    - hello
+
 - intent: feedback_findprod_yes
   examples: |
     - Yes i found it
-    - Yes 
-    - I found it 
+    - Yes
+    - I found it
 
 - intent: feedback_findprod_no
   examples: |
     - No
     - I did not find it
-    - No i did not 
+    - No i did not
 
 - intent: feedback_whichprod
   examples: |
-    - form
-    
+    - a book
+
 - intent: feedback_pri
   examples: |
     - yes
@@ -28,12 +42,12 @@ nlu:
 
 - intent: feedback_impfeat
   examples: |
-    - form
-      
+    - supercoins
+
 - intent: feedback_addfeat
   examples: |
-    - form
-      
+    - something
+
 - intent: feedback_exp
   examples: |
     - 1
@@ -41,20 +55,20 @@ nlu:
     - 3
     - 4
     - 5
-      
+
 - intent: feedback_recommendation
   examples: |
     - most likely
     - likely
     - not likely
-      
+
 - intent: feedback_back
   examples: |
     - For sure
     - Maybe
     - It was a mistake
-      
+
 - intent: feedback_rating
   examples: |
     - Ya sure
-    - No I do not want to 
+    - No I do not want to
