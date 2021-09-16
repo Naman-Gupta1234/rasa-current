@@ -1,0 +1,55 @@
+version: "2.0"
+
+stories:
+
+- story: within 3 days finance
+  steps:
+    - intent: dues_start 
+    - action: utter_dues_notice
+    - intent: dues_notpaid
+    - action: utter_dues_days 
+    - action: utter_dues_within_three
+    - intent: dues_three_days
+    - action: utter_dues_reason
+    - intent: dues_reason_delay
+    - action: utter_dues_financial
+    - intent: dues_finance
+
+- story: within 3 days forgot
+  steps:
+    - intent: dues_start 
+    - action: utter_dues_notice
+    - intent: dues_notpaid
+    - action: utter_dues_days 
+    - action: utter_dues_within_three
+    - intent: dues_three_days
+    - action: utter_dues_reason
+    - intent: dues_reason_delay
+    - action: utter_dues_forgot
+    - intent: dues_forget
+
+- story: more than 3 days forgot
+  steps:
+    - intent: dues_start 
+    - action: utter_dues_notice
+    - intent: dues_notpaid
+    - action: utter_dues_days 
+    - action: utter_dues_more_three
+    - intent: dues_three_days
+    - action: utter_dues_reason
+    - intent: dues_reason_delay
+    - action: utter_dues_forgot
+    - intent: dues_forget
+
+- story: more than 3 days finance
+  steps:
+    - intent: dues_start 
+    - action: utter_dues_notice
+    - intent: dues_notpaid
+    - action: utter_dues_days 
+    - action: utter_dues_more_three
+    - intent: dues_three_days
+    - action: utter_dues_reason
+    - intent: dues_reason_delay
+    - action: utter_dues_financial
+    - intent: dues_finance
