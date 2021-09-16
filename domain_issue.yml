@@ -38,9 +38,9 @@ responses:
   utter_issue_ask:
   - text: Is there any other issue?
     buttons: 
-    - text: "No"
+    - title: "No"
       payload: "/issue_any_no"
-    - text: "Yes"
+    - title: "Yes"
       payload: "/issue_any_yes"
   utter_issue_other:
   - text: Please describe your issue?

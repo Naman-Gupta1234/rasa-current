@@ -1,0 +1,45 @@
+version: "2.0"
+nlu:
+
+- intent: dues_start
+  examples: |
+    - Start
+    - Hi
+    - Hello
+    
+- intent: dues_notpaid
+  examples: |
+    - Yes I am well aware about it
+    - Yes I know about it
+    - Yes I know
+
+- intent: dues_three_days
+  examples: |
+    - Sure I will pay it before 3 days are over
+    - Sure I will
+
+- intent: dues_morethan_three
+  examples: |
+    - Okay I will pay it
+    - Okay
+
+- intent: dues_reason_delay
+  examples: |
+    - I lost my job
+    - My financial condition is not that good
+    - I have some unpaid Emi's 
+    - I forgot to pay
+    - It just slipped out of my mind  
+
+
+- intent: dues_finance
+  examples: |
+    - Okay 
+    - Thank you 
+    
+
+- intent: dues_forget 
+  examples: |
+    - Okay 
+    - Thank you 
+    
